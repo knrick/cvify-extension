@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "icons": {
+    "48": "src/assets/icon48.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "alarms",
+    "contextMenus",
+    "tabs",
+    "https://cvify.xyz/*",
+    "notifications"
+  ],
+  "host_permissions": ["https://cvify.xyz/*"],
+  "action": {
+    "default_popup": "src/popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/content.js"],
+      "type": "module"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/utils/csrf.js",
+        "src/utils/validation.js",
+        "src/utils/rateLimiter.js",
+        "src/editor/cv_localizations.js",
+        "src/editor/cv_editor.html",
+        "src/templates/*.html"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "background": {
+    "service_worker": "src/background/background.js",
+    "type": "module"
+  }
+}

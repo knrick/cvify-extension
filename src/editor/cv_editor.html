@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Editor</title>
+  <style>
+    body { 
+      width: 100%; 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 20px; 
+    }
+    .container { 
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .profile-list { 
+      width: 100%; 
+    }
+    #editor-preview-container { 
+      display: none; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 20px; 
+    }
+    #cv-data { 
+      width: 100%; 
+      height: 400px; 
+      overflow-y: auto; 
+    }
+    .button-container { 
+      margin-top: 20px; 
+    }
+    .button-container button { 
+      margin-right: 10px; 
+    }
+    #button-container { 
+      display: none; 
+    }
+    #profile-select {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+    .cv-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .cv-info {
+      flex-grow: 1;
+    }
+
+    .rename-btn, .duplicate-btn, .delete-btn {
+      margin-left: 5px;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 3px;
+    }
+    .rename-btn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .duplicate-btn {
+      background-color: #008CBA;
+      color: white;
+    }
+    .delete-btn {
+      background-color: #ff4d4d;
+      color: white;
+    }
+    .rename-btn:hover, .duplicate-btn:hover {
+      opacity: 0.8;
+    }
+    .delete-btn:hover {
+      background-color: #ff1a1a;
+    }
+    .cv-name {
+      font-weight: bold;
+    }
+    .cv-date {
+      font-size: 0.8em;
+      color: #666;
+    }
+    .create-cv-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .create-cv-btn:hover {
+      background-color: #45a049;
+    }
+    .profile-picture {
+      max-width: 200px;
+      max-height: 200px;
+      margin-bottom: 10px;
+    }
+    #save-changes-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    #save-changes-btn:hover {
+      background-color: #45a049;
+    }
+    #save-changes-btn:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #000;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+      position: relative;
+    }
+    
+    .loading::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .button.loading {
+      color: transparent;
+    }
+
+    .cv-item.loading {
+      background-color: #f5f5f5;
+    }
+
+    #profile-select.loading {
+      position: relative;
+      min-height: 100px;
+    }
+
+    #cv-data.loading {
+      position: relative;
+      min-height: 200px;
+    }
+
+    #preview-content.loading {
+      position: relative;
+      min-height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#editor-preview-container" class="skip-link" id="skip-link"></a>
+  <h1 id="cv-editor-title"></h1>
+  <div class="container">
+    <div class="profile-list">
+      <h2 id="scraped-profiles-title"></h2>
+      <button id="create-cv-btn" class="create-cv-btn"></button>
+      <div id="profile-select"></div>
+    </div>
+    <div id="editor-preview-container">
+      <div class="editor">
+        <h2 id="edit-cv-data-title"></h2>
+        <div id="cv-data"></div>
+        <button id="save-changes-btn" disabled></button>
+      </div>
+      <div class="preview">
+        <h2 id="preview-title"></h2>
+        <label for="template-select" id="select-template-label"></label>
+        <select id="template-select">
+          <option value="template1" id="template1-option"></option>
+          <option value="template2" id="template2-option"></option>
+          <option value="template3" id="template3-option"></option>
+          <option value="template4" id="template4-option"></option>
+        </select>
+        <div class="language-selector">
+          <label for="cv-language-select" id="cv-language-label">CV Language:</label>
+          <select id="cv-language-select">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <!-- Add more language options as needed -->
+          </select>
+        </div>
+        <div id="preview-content"></div>
+      </div>
+    </div>
+  </div>
+  <div id="button-container" class="button-container">
+    <button id="generate-pdf"></button>
+    <button id="save-html"></button>
+    <button id="open-preview"></button>
+  </div>
+  <script src="cv_localizations.js"></script>
+  <script type="module" src="cv_editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+{
+  "extensionName": {
+      "message": "Générateur de CV",
+      "description": "Le nom de l'extension"
+  },
+  "extensionDescription": {
+      "message": "Générer un CV PDF à partir d'un profil web",
+      "description": "La description de l'extension"
+  },
+  "openCVEditor": {
+      "message": "Ouvrir l'éditeur de CV",
+      "description": "Élément du menu contextuel pour ouvrir l'éditeur de CV"
+  },
+  "extractProfile": {
+      "message": "Extraire le profil",
+      "description": "Texte du bouton pour extraire le profil"
+  },
+  "login": {
+      "message": "Se connecter",
+      "description": "Texte du bouton pour se connecter"
+  },
+  "register": {
+      "message": "S'inscrire",
+      "description": "Texte du bouton pour s'inscrire"
+  },
+  "logout": {
+      "message": "Se déconnecter",
+      "description": "Texte du bouton pour se déconnecter"
+  },
+  "email": {
+      "message": "Courriel",
+      "description": "Étiquette pour le champ de saisie de courriel"
+  },
+  "password": {
+      "message": "Mot de passe",
+      "description": "Étiquette pour le champ de saisie de mot de passe"
+  },
+  "createNewCV": {
+      "message": "Créer un nouveau CV",
+      "description": "Texte du bouton pour créer un nouveau CV"
+  },
+  "errorCreateCV": {
+      "message": "Une erreur est survenue lors de la création d'un nouveau CV.",
+      "description": "Message d'erreur lorsque la création d'un nouveau CV échoue"
+  },
+  "editCVData": {
+      "message": "Modifier les données du CV",
+      "description": "En-tête pour la section de modification du CV"
+  },
+  "preview": {
+      "message": "Aperçu",
+      "description": "En-tête pour la section d'aperçu"
+  },
+  "saveChanges": {
+      "message": "Enregistrer les modifications",
+      "description": "Texte du bouton pour enregistrer les modifications"
+  },
+  "generatePDF": {
+      "message": "Générer un PDF",
+      "description": "Texte du bouton pour générer un PDF"
+  },
+  "saveAsHTML": {
+      "message": "Enregistrer en HTML",
+      "description": "Texte du bouton pour enregistrer en HTML"
+  },
+  "openPreview": {
+      "message": "Ouvrir l'aperçu",
+      "description": "Texte du bouton pour ouvrir l'aperçu"
+  },
+  "cvEditor": {
+      "message": "Éditeur de CV",
+      "description": "Titre de la page de l'éditeur de CV"
+  },
+  "scrapedProfiles": {
+      "message": "Profils extraits",
+      "description": "En-tête pour la section des profils extraits"
+  },
+  "selectTemplate": {
+      "message": "Sélectionner un modèle",
+      "description": "Étiquette pour le menu déroulant de sélection de modèle"
+  },
+  "template1": {
+      "message": "Modèle 1",
+      "description": "Nom du premier modèle de CV"
+  },
+  "template2": {
+      "message": "Modèle 2",
+      "description": "Nom du deuxième modèle de CV"
+  },
+  "template3": {
+      "message": "Modèle 3",
+      "description": "Nom du troisième modèle de CV"
+  },
+  "template4": {
+      "message": "Modèle 4",
+      "description": "Nom du quatrième modèle de CV"
+  },
+  "extractionMessage": {
+      "message": "Extraction des informations du profil, veuillez patienter...",
+      "description": "Message affiché lors de l'extraction du profil"
+  },
+  "loadingMessage": {
+      "message": "Chargement...",
+      "description": "Message affiché lors du chargement"
+  },
+  "errorNoActiveTab": {
+      "message": "Aucun onglet actif trouvé. Veuillez vous assurer qu'un onglet actif est ouvert.",
+      "description": "Message d'erreur lorsqu'aucun onglet actif n'est trouvé"
+  },
+  "errorExtractingHTML": {
+      "message": "Impossible d'extraire le HTML de la page. Veuillez vérifier que vous êtes sur une page web valide et réessayer.",
+      "description": "Message d'erreur lorsque l'extraction du HTML échoue"
+  },
+  "errorProcessingHTML": {
+      "message": "Erreur lors du traitement du HTML. Veuillez réessayer.",
+      "description": "Message d'erreur lorsque le traitement du HTML échoue"
+  },
+  "successSaveChanges": {
+      "message": "Modifications enregistrées avec succès !",
+      "description": "Message de succès lorsque les modifications sont enregistrées"
+  },
+  "errorSaveChanges": {
+      "message": "Impossible d'enregistrer les modifications : $ERROR$",
+      "description": "Message d'erreur lorsque l'enregistrement des modifications échoue",
+      "placeholders": {
+          "error": {
+              "content": "$1",
+              "example": "Erreur réseau"
+          }
+      }
+  },
+  "confirmDeleteCV": {
+      "message": "Êtes-vous sûr de vouloir supprimer ce CV ?",
+      "description": "Message de confirmation pour supprimer un CV"
+  },
+  "errorDeleteCV": {
+      "message": "Impossible de supprimer le CV. Veuillez réessayer.",
+      "description": "Message d'erreur lorsque la suppression d'un CV échoue"
+  },
+  "confirmSaveChanges": {
+      "message": "Vous avez des modifications non enregistrées. Voulez-vous les enregistrer ?",
+      "description": "Message de confirmation pour enregistrer les modifications lors du changement de CV"
+  },
+  "confirmDiscardChanges": {
+      "message": "Vous avez des modifications non enregistrées. Voulez-vous continuer sans les enregistrer ?",
+      "description": "Message de confirmation pour enregistrer les modifications lors du changement de CV"
+  },
+  "uploadProfilePicture": {
+      "message": "Télécharger une photo de profil",
+      "description": "Étiquette pour le champ de téléchargement de la photo de profil"
+  },
+  "personalInformation": {
+      "message": "Informations personnelles",
+      "description": "En-tête pour la section des informations personnelles"
+  },
+  "name": {
+      "message": "Nom",
+      "description": "Étiquette pour le champ de saisie du nom"
+  },
+  "title": {
+      "message": "Titre",
+      "description": "Étiquette pour le champ de saisie du titre"
+  },
+  "skipToEditor": {
+      "message": "Aller à l'éditeur de CV",
+      "description": "Texte du lien pour accéder à l'éditeur de CV"
+  },
+  "deleteCV": {
+      "message": "Supprimer",
+      "description": "Texte du bouton pour supprimer un CV"
+  },
+  "profilePicture": {
+      "message": "Photo de profil",
+      "description": "Étiquette pour la section photo de profil"
+  },
+  "summary": {
+      "message": "Résumé",
+      "description": "Étiquette pour la section résumé"
+  },
+  "skills": {
+      "message": "Compétences",
+      "description": "Étiquette pour la section compétences"
+  },
+  "workExperience": {
+      "message": "Expérience professionnelle",
+      "description": "Étiquette pour la section expérience professionnelle"
+  },
+  "education": {
+      "message": "Éducation",
+      "description": "Étiquette pour la section éducation"
+  },
+  "company": {
+      "message": "Entreprise",
+      "description": "Étiquette pour le champ de saisie du nom de l'entreprise dans l'expérience professionnelle"
+  },
+  "jobTitle": {
+      "message": "Poste",
+      "description": "Étiquette pour le champ de saisie du poste dans l'expérience professionnelle"
+  },
+  "date": {
+      "message": "Date",
+      "description": "Étiquette pour le champ de saisie de la date"
+  },
+  "description": {
+      "message": "Description",
+      "description": "Étiquette pour le champ de saisie de la description"
+  },
+  "institution": {
+      "message": "Institution",
+      "description": "Étiquette pour le champ de saisie de l'institution dans l'éducation"
+  },
+  "degree": {
+      "message": "Diplôme",
+      "description": "Étiquette pour le champ de saisie du diplôme dans l'éducation"
+  },
+  "contactInformation": {
+      "message": "Informations de contact",
+      "description": "Étiquette pour la section des informations de contact"
+  },
+  "phone": {
+      "message": "Téléphone",
+      "description": "Étiquette pour le champ de saisie du numéro de téléphone"
+  },
+  "location": {
+      "message": "Lieu",
+      "description": "Étiquette pour le champ de saisie du lieu"
+  },
+  "additionalSections": {
+      "message": "Sections supplémentaires",
+      "description": "Étiquette pour les sections supplémentaires"
+  },
+  "availability": {
+      "message": "Disponibilité",
+      "description": "Étiquette pour la section disponibilité"
+  },
+  "hourlyRate": {
+      "message": "Tarif horaire",
+      "description": "Étiquette pour la section tarif horaire"
+  },
+  "testimonials": {
+      "message": "Témoignages",
+      "description": "Étiquette pour la section témoignages"
+  },
+  "certifications": {
+      "message": "Certifications",
+      "description": "Étiquette pour la section certifications"
+  },
+  "languages": {
+      "message": "Langues",
+      "description": "Étiquette pour la section langues"
+  },
+  "portfolio": {
+      "message": "Portfolio",
+      "description": "Étiquette pour la section portfolio"
+  },
+  "cvLanguage": {
+      "message": "Langue du CV",
+      "description": "Étiquette pour le sélecteur de langue du CV"
+  },
+  "renameCV": {
+      "message": "Renommer",
+      "description": "Texte du bouton pour renommer un CV"
+  },
+  "errorRenameCV": {
+      "message": "Impossible de renommer le CV. Veuillez réessayer.",
+      "description": "Message d'erreur lorsque le renommage du CV échoue"
+  },
+  "duplicateCV": {
+      "message": "Dupliquer",
+      "description": "Texte du bouton pour dupliquer un CV"
+  },
+  "errorDuplicateCV": {
+      "message": "Impossible de dupliquer le CV. Veuillez réessayer.",
+      "description": "Message d'erreur lorsque la duplication du CV échoue"
+  },
+  "enterNewName": {
+      "message": "Entrez un nouveau nom pour le CV",
+      "description": "Message pour saisir un nouveau nom pour le CV"
+  },
+  "extractionComplete": {
+      "message": "Profil extrait avec succès !",
+      "description": "Message affiché lorsque l'extraction est terminée"
+  },
+  "extractionError": {
+      "message": "Erreur lors de l'extraction du profil : $MESSAGE$",
+      "description": "Message affiché lorsque l'extraction échoue",
+      "placeholders": {
+          "message": {
+              "content": "$1",
+              "example": "Erreur réseau"
+          }
+      }
+  },
+  "extractionInProgressTitle": {
+      "message": "Extraction du profil en cours",
+      "description": "Titre pour la notification lorsque l'extraction est en cours"
+  },
+  "extractionInProgressMessage": {
+      "message": "Votre profil est en cours d'extraction. Il sera ajouté une fois terminé.",
+      "description": "Message pour la notification lorsque l'extraction est en cours"
+  },
+  "upgrade": {
+      "message": "Passer à Premium",
+      "description": "Texte du bouton pour passer à la version premium"
+  },
+  "buyCredits": {
+      "message": "Acheter des crédits",
+      "description": "Texte du bouton pour acheter des crédits"
+  },
+  "sectionLocked": {
+      "message": "Cette section ne peut pas être réordonnée",
+      "description": "Texte de l'info-bulle pour les sections bloquées"
+  },
+  "reorderSections": {
+      "message": "Vous pouvez réordonner les sections en cliquant et en les déplaçant.",
+      "description": "Message pour réordonner les sections"
+  },
+  "invalidEmailMessage": {
+    "message": "Veuillez saisir une adresse e-mail valide",
+    "description": "Message d'erreur pour e-mail invalide"
+  },
+  "invalidPasswordMessage": {
+    "message": "Le mot de passe doit contenir au moins 8 caractères et inclure au moins une lettre majuscule, une lettre minuscule et un chiffre",
+    "description": "Message d'erreur pour mot de passe invalide"
+  },
+  "userAlreadyExistsMessage": {
+    "message": "L'utilisateur existe déjà",
+    "description": "Message d'erreur lorsque l'utilisateur existe déjà"
+  },
+  "userCreatedMessage": {
+    "message": "Utilisateur créé avec succès",
+    "description": "Message de succès lors de la création de l'utilisateur"
+  },
+  "verifyEmail": {
+    "message": "Vérifier l'e-mail",
+    "description": "Texte du bouton pour vérifier l'e-mail"
+  },
+  "enterVerificationCode": {
+    "message": "Saisissez le code de vérification à 6 chiffres",
+    "description": "Étiquette pour la saisie du code de vérification"
+  },
+  "resendCode": {
+    "message": "Renvoyer le code",
+    "description": "Texte du bouton pour renvoyer le code de vérification"
+  },
+  "backToLogin": {
+    "message": "Retour à la connexion",
+    "description": "Texte du bouton pour revenir à la connexion"
+  },
+  "verificationCodeSent": {
+    "message": "Un code de vérification a été envoyé à $1",
+    "description": "Message affiché lorsque le code de vérification est envoyé"
+  },
+  "invalidVerificationCode": {
+    "message": "Code de vérification invalide",
+    "description": "Message d'erreur pour code de vérification invalide"
+  },
+  "verificationCodeResent": {
+    "message": "Le code de vérification a été renvoyé",
+    "description": "Message affiché lorsque le code de vérification est renvoyé"
+  },
+  "verificationRequired": {
+    "message": "Vérification de l'e-mail requise",
+    "description": "Titre pour la vérification d'e-mail requise"
+  },
+  "pleaseVerifyEmail": {
+    "message": "Veuillez vérifier votre adresse e-mail avant de continuer",
+    "description": "Message affiché lorsque la vérification de l'e-mail est requise"
+  },
+  "rateLimitExceeded": {
+    "message": "Trop de requêtes. Veuillez attendre $1 secondes avant de réessayer.",
+    "description": "Message d'erreur lorsque la limite de taux est dépassée"
+  },
+  "rateLimitExceededTooltip": {
+    "message": "Bouton désactivé en raison de la limite de taux. Veuillez patienter.",
+    "description": "Info-bulle pour le bouton désactivé en raison de la limite de taux"
+  },
+  "errorInitializingEditor": {
+    "message": "Échec de l'initialisation de l'éditeur. Veuillez réessayer.",
+    "description": "Message d'erreur lorsque l'initialisation de l'éditeur échoue"
+  },
+  "errorFetchingCVs": {
+    "message": "Échec de la récupération des CVs. Veuillez réessayer.",
+    "description": "Message d'erreur lors de la récupération des CVs"
+  },
+  "errorLoadingUserInfo": {
+    "message": "Échec du chargement des informations utilisateur. Veuillez réessayer.",
+    "description": "Message d'erreur lors du chargement des informations utilisateur"
+  },
+  "invalidLoginMessage": {
+    "message": "Email ou mot de passe invalide",
+    "description": "Message d'erreur pour des identifiants de connexion invalides"
+  },
+  "invalidRegistrationMessage": {
+    "message": "Détails d'inscription invalides",
+    "description": "Message d'erreur pour des détails d'inscription invalides"
+  },
+  "registrationError": {
+    "message": "Échec de l'inscription. Veuillez réessayer.",
+    "description": "Message d'erreur lorsque l'inscription échoue"
+  },
+  "errorCommunicatingWithPage": {
+    "message": "Erreur de communication avec la page",
+    "description": "Message d'erreur lors de la communication avec la page"
+  },
+  "failedToExtractHTML": {
+    "message": "Échec de l'extraction du HTML de la page",
+    "description": "Message d'erreur lors de l'extraction du HTML"
+  },
+  "errorProcessingData": {
+    "message": "Erreur lors du traitement des données",
+    "description": "Message d'erreur lors du traitement des données"
+  },
+  "failedToOpenPaymentsPage": {
+    "message": "Impossible d'ouvrir la page des paiements. Veuillez réessayer.",
+    "description": "Message d'erreur lors de l'ouverture de la page des paiements"
+  },
+  "invalidVerificationCodeMessage": {
+    "message": "Veuillez entrer un code de vérification valide",
+    "description": "Message d'erreur pour un code de vérification invalide"
+  },
+  "verificationError": {
+    "message": "La vérification a échoué. Veuillez réessayer.",
+    "description": "Message d'erreur lorsque la vérification échoue"
+  },
+  "resendCodeError": {
+    "message": "Impossible de renvoyer le code de vérification. Veuillez réessayer.",
+    "description": "Message d'erreur lors du renvoi du code de vérification"
+  },
+  "errorLoadingTemplates": {
+    "message": "Impossible de charger les modèles de CV. Veuillez réessayer.",
+    "description": "Message d'erreur lors du chargement des modèles de CV"
+  },
+  "addItem": {
+    "message": "Ajouter un élément",
+    "description": "Texte du bouton pour ajouter un élément à une liste"
+  },
+  "removeItem": {
+    "message": "Supprimer l'élément",
+    "description": "Texte du bouton pour supprimer un élément d'une liste"
+  },
+  "errorLoadingCV": {
+    "message": "Échec du chargement du CV. Veuillez réessayer.",
+    "description": "Message d'erreur lors du chargement d'un CV"
+  },
+  "transactionError": {
+    "message": "Impossible de traiter la transaction",
+    "description": "Message d'erreur lors du traitement de la transaction"
+  },
+  "transactionConfirmed": {
+    "message": "Transaction confirmée",
+    "description": "Message de succès lors de la confirmation de la transaction"
+  },
+  "transactionCompleted": {
+    "message": "Transaction déjà complétée",
+    "description": "Message lorsque la transaction est déjà complétée"
+  },
+  "transactionNotFound": {
+    "message": "Transaction non trouvée",
+    "description": "Message d'erreur lorsque la transaction n'est pas trouvée"
+  },
+  "userIdMismatch": {
+    "message": "ID utilisateur ne correspond pas",
+    "description": "Message d'erreur lorsque les IDs utilisateur ne correspondent pas"
+  },
+  "cvDuplicatedSuccess": {
+    "message": "CV dupliqué avec succès",
+    "description": "Message de succès lors de la duplication du CV"
+  },
+  "errorDuplicatingCV": {
+    "message": "Une erreur s'est produite lors de la duplication du CV",
+    "description": "Message d'erreur lors de la duplication du CV"
+  },
+  "unexpectedError": {
+    "message": "Une erreur inattendue s'est produite",
+    "description": "Message d'erreur générique pour les erreurs inattendues"
+  },
+  "transactionExistsOtherUser": {
+    "message": "La transaction existe mais appartient à un autre utilisateur",
+    "description": "Erreur lorsque la transaction appartient à un autre utilisateur"
+  },
+  "cvUpdatedSuccessfully": {
+    "message": "CV mis à jour avec succès",
+    "description": "Message de succès lors de la mise à jour du CV"
+  },
+  "cvRenamedSuccessfully": {
+    "message": "CV renommé avec succès",
+    "description": "Message de succès lors du renommage du CV"
+  },
+  "cvNotFound": {
+    "message": "CV introuvable",
+    "description": "Message d'erreur lorsque le CV n'est pas trouvé"
+  },
+  "anErrorOccurredWhileRenamingTheCV": {
+    "message": "Une erreur s'est produite lors du renommage du CV",
+    "description": "Message d'erreur lors du renommage du CV"
+  },
+  "subscriptionCancelledSuccessfully": {
+    "message": "Abonnement annulé avec succès",
+    "description": "Message de succès lors de l'annulation de l'abonnement"
+  },
+  "youMustBeLoggedInToCancelASubscription": {
+    "message": "Vous devez être connecté pour annuler un abonnement",
+    "description": "Message d'erreur lors de la tentative d'annulation d'abonnement sans être connecté"
+  },
+  "invalidUsernameOrPassword": {
+    "message": "Nom d'utilisateur ou mot de passe invalide",
+    "description": "Message d'erreur pour des identifiants de connexion invalides"
+  },
+  "noExtractionsLeft": {
+    "message": "Plus d'extractions disponibles",
+    "description": "Message lorsqu'il ne reste plus d'extractions disponibles"
+  },
+  "tier": {
+    "message": "Niveau",
+    "description": "Étiquette pour le niveau"
+  },
+  "extractionsLeft": {
+    "message": "Extractions restantes",
+    "description": "Étiquette pour les extractions restantes"
+  },
+  "openPayments": {
+    "message": "Ouvrir les paiements",
+    "description": "Texte du bouton pour ouvrir les paiements"
+  },
+  "emailVerifiedSuccessfully": {
+    "message": "Email vérifié avec succès",
+    "description": "Message de succès lorsque l'email est vérifié"
+  },
+  "errorVerifyingEmail": {
+    "message": "Erreur lors de la vérification de l'email",
+    "description": "Message d'erreur lors de la vérification de l'email"
+  },
+  "emailAlreadyVerified": {
+    "message": "L'email est déjà vérifié",
+    "description": "Message lors de la tentative de vérification d'un email déjà vérifié"
+  },
+  "verificationEmailSent": {
+    "message": "L'email de vérification a été envoyé",
+    "description": "Message de succès lorsque l'email de vérification est envoyé"
+  },
+  "errorResendingVerification": {
+    "message": "Erreur lors du renvoi de l'email de vérification",
+    "description": "Message d'erreur lors du renvoi de l'email de vérification"
+  },
+  "loggedInSuccessfully": {
+    "message": "Connexion réussie",
+    "description": "Message de succès lors de la connexion"
+  },
+  "loggedOutSuccessfully": {
+    "message": "Déconnexion réussie",
+    "description": "Message de succès lors de la déconnexion"
+  },
+  "unauthorized": {
+    "message": "Accès non autorisé",
+    "description": "Message d'erreur pour un accès non autorisé"
+  },
+  "youDoNotHavePermissionToRenameThisCV": {
+    "message": "Vous n'avez pas la permission de renommer ce CV",
+    "description": "Message d'erreur lorsque l'utilisateur n'a pas la permission de renommer un CV"
+  },
+  "failedToCancelSubscription": {
+    "message": "Impossible d'annuler l'abonnement",
+    "description": "Message d'erreur lors de l'annulation de l'abonnement"
+  },
+  "notPremiumUser": {
+    "message": "Vous n'êtes pas un utilisateur premium",
+    "description": "Message d'erreur lorsqu'un utilisateur non premium tente une action premium"
+  },
+  "emailAndPasswordRequired": {
+    "message": "Email et mot de passe requis",
+    "description": "Message d'erreur lorsque l'email ou le mot de passe est manquant"
+  },
+  "errorSendingVerificationEmail": {
+    "message": "Erreur lors de l'envoi de l'email de vérification",
+    "description": "Message d'erreur lors de l'envoi de l'email de vérification"
+  },
+  "errorCreatingUser": {
+    "message": "Erreur lors de la création de l'utilisateur",
+    "description": "Message d'erreur lors de la création de l'utilisateur"
+  },
+  "emailAndVerificationCodeRequired": {
+    "message": "Email et code de vérification requis",
+    "description": "Message d'erreur lorsque l'email ou le code de vérification est manquant"
+  },
+  "userNotFound": {
+    "message": "Utilisateur non trouvé",
+    "description": "Message d'erreur lorsque l'utilisateur n'est pas trouvé"
+  },
+  "invalidOrExpiredVerificationCode": {
+    "message": "Code de vérification invalide ou expiré",
+    "description": "Message d'erreur lorsque le code de vérification est invalide ou expiré"
+  },
+  "transactionExistsButBelongsToDifferentUser": {
+    "message": "La transaction existe mais appartient à un autre utilisateur",
+    "description": "Message d'erreur lorsque l'ID de transaction est associé à un autre utilisateur"
+  },
+  "transactionAlreadyCompleted": {
+    "message": "La transaction est déjà terminée",
+    "description": "Message d'erreur lors de la tentative de traitement d'une transaction terminée"
+  },
+  "youDoNotHavePermissionToDuplicateThisCV": {
+    "message": "Vous n'avez pas la permission de dupliquer ce CV",
+    "description": "Message d'erreur lorsque l'utilisateur n'a pas la permission de dupliquer un CV"
+  },
+  "youHaveReachedTheMaximumNumberOfAllowedCVs": {
+    "message": "Vous avez atteint le nombre maximum de CV autorisés",
+    "description": "Message d'erreur lorsque la limite de CV est atteinte"
+  },
+  "cvProcessedSuccessfully": {
+    "message": "CV traité avec succès",
+    "description": "Message de succès lors du traitement du CV"
+  },
+  "cvDeletedSuccessfully": {
+    "message": "CV supprimé avec succès",
+    "description": "Message de succès lors de la suppression du CV"
+  },
+  "cvCreatedSuccessfully": {
+    "message": "CV créé avec succès",
+    "description": "Message de succès lors de la création du CV"
+  },
+  "invalidOrExpiredToken": {
+    "message": "Jeton invalide ou expiré",
+    "description": "Message d'erreur pour un jeton invalide ou expiré"
+  },
+  "youMustBeLoggedInToViewUserInfo": {
+    "message": "Vous devez être connecté pour voir les informations utilisateur",
+    "description": "Message d'erreur lors de la tentative de voir les informations utilisateur sans être connecté"
+  },
+  "youMustBeLoggedInToGenerateAPaymentToken": {
+    "message": "Vous devez être connecté pour générer un jeton de paiement",
+    "description": "Message d'erreur lors de la tentative de générer un jeton de paiement sans être connecté"
+  },
+  "newNameRequiredAndMustBeString": {
+    "message": "Un nouveau nom est requis et doit être une chaîne de caractères",
+    "description": "Message d'erreur lorsque le nouveau nom est invalide"
+  },
+  "newNameTooLong": {
+    "message": "Le nouveau nom est trop long",
+    "description": "Message d'erreur lorsque le nouveau nom dépasse la limite"
+  },
+  "mustBeLoggedIn": {
+    "message": "Vous devez être connecté pour annuler un abonnement",
+    "description": "Message d'erreur lorsque l'utilisateur n'est pas connecté"
+  },
+  "invalidUser": {
+    "message": "Utilisateur invalide",
+    "description": "Message d'erreur pour un utilisateur invalide"
+  },
+  "subscriptionCancelled": {
+    "message": "Abonnement annulé avec succès",
+    "description": "Message de succès lors de l'annulation de l'abonnement"
+  },
+  "emailCodeAndPasswordRequired": {
+    "message": "Email, code et mot de passe sont requis",
+    "description": "Message d'erreur lorsque l'email, le code ou le mot de passe est manquant"
+  },
+  "invalidOrExpiredResetCode": {
+    "message": "Code de restitution invalide ou expiré",
+    "description": "Message d'erreur lorsque le code de restitution est invalide ou expiré"
+  },
+  "passwordResetSuccessfully": {
+    "message": "Mot de passe restitué avec succès",
+    "description": "Message de succès lorsque le mot de passe est restitué"
+  },
+  "errorSendingPasswordResetEmail": {
+    "message": "Erreur lors de l'envoi de l'email de restitution de mot de passe",
+    "description": "Message d'erreur lorsque l'envoi de l'email de restitution de mot de passe échoue"
+  },
+  "passwordResetEmailSent": {
+    "message": "Email de restitution de mot de passe envoyé",
+    "description": "Message de succès lorsque l'email de restitution de mot de passe est envoyé"
+  },
+  "enterResetCode": {
+    "message": "Entrez le code de réinitialisation",
+    "description": "Texte indicatif pour le champ de code de réinitialisation"
+  },
+  "enterNewPassword": {
+    "message": "Entrez le nouveau mot de passe",
+    "description": "Texte indicatif pour le champ de nouveau mot de passe"
+  },
+  "resetPasswordError": {
+    "message": "Erreur lors de la réinitialisation du mot de passe",
+    "description": "Message d'erreur lorsque la réinitialisation du mot de passe échoue"
+  },
+  "invalidResetCodeMessage": {
+    "message": "Code de réinitialisation invalide",
+    "description": "Message d'erreur lorsque le code de réinitialisation est invalide"
+  },
+  "resetPassword": {
+    "message": "Réinitialiser le mot de passe",
+    "description": "Texte du bouton pour réinitialiser le mot de passe"
+  },
+  "submit": {
+    "message": "Envoyer",
+    "description": "Texte du bouton pour envoyer le formulaire"
+  },
+  "cancel": {
+    "message": "Annuler",
+    "description": "Texte du bouton pour annuler l'action"
+  },
+  "requestPasswordResetError": {
+    "message": "Erreur lors de la demande de réinitialisation du mot de passe",
+    "description": "Message d'erreur lorsque la demande de réinitialisation du mot de passe échoue"
+  },
+  "emailRequired": {
+    "message": "Email est requis",
+    "description": "Message d'erreur lorsque l'email est manquant"
+  },
+  "errorResendingPasswordReset": {
+    "message": "Erreur lors du renvoi de la réinitialisation du mot de passe",
+    "description": "Message d'erreur lorsque le renvoi de la réinitialisation du mot de passe échoue"
+  },
+  "passwordResetCancelled": {
+    "message": "Réinitialisation du mot de passe annulée",
+    "description": "Message de succès lorsque la réinitialisation du mot de passe est annulée"
+  },
+  "errorCancellingPasswordReset": {
+    "message": "Erreur lors de l'annulation de la réinitialisation du mot de passe",
+    "description": "Message d'erreur lorsque l'annulation de la réinitialisation du mot de passe échoue"
+  }
+}

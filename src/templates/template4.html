@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-column {
+            flex: 1;
+            background-color: #d6e4ff;
+            padding: 30px;
+            color: white;
+        }
+        .right-column {
+            flex: 2;
+            padding: 30px;
+        }
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+        .title {
+            font-size: 18px;
+            color: #555;
+            margin-top: 5px;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <img src="https://cvify.xyz/{{ profile_picture }}" alt="Profile Picture" class="profile-picture">
+            <h1 class="name">{{ name }}</h1>
+            <p class="title">{{ title }}</p>
+
+            {%if contact%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.contactInformation }}</h2>
+                <p>{{ localizations.email }}: {{ contact.email }}</p>
+                <p>{{ localizations.phone }}: {{ contact.phone }}</p>
+                <p>{{ localizations.location }}: {{ contact.location }}</p>
+            </div>
+            {%endif%}
+
+            {%if testimonials%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.testimonials }}</h2>
+                <p>{{ testimonials }}</p>
+            </div>
+            {%endif%}
+        </div>
+        
+        <div class="right-column">
+            {%if skills%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.skills }}</h2>
+                <ul>
+                    {%for skill in skills%}
+                    <li>• {{ skill }}</li>
+                    {%endfor%}
+                </ul>
+            </div>
+            {%endif%}
+            
+            {%if experience%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.workExperience }}</h2>
+                {%for job in experience%}
+                <div style="margin-bottom: 15px;">
+                    <h3>{{ job.title }}</h3>
+                    <p style="font-style: italic;">{{ job.company }} | {{ job.date }}</p>
+                    <p>{{ job.description }}</p>
+                </div>
+                {%endfor%}
+            </div>
+            {%endif%}
+            
+            {%if education%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.education }}</h2>
+                {%for edu in education%}
+                <div style="margin-bottom: 15px;">
+                    <h3>{{ edu.degree }}</h3>
+                    <p style="font-style: italic;">{{ edu.institution }} ({{ edu.date }})</p>
+                    <p>{{ edu.details }}</p>
+                </div>
+                {%endfor%}
+            </div>
+            {%endif%}
+        </div>
+    </div>
+</body>
+</html>

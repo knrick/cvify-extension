@@ -1,0 +1,722 @@
+{
+    "extensionName": {
+      "message": "CV Generator",
+      "description": "The name of the extension"
+    },
+    "extensionDescription": {
+      "message": "Generate a PDF CV from a web profile",
+      "description": "The description of the extension"
+    },
+    "openCVEditor": {
+      "message": "Open CV Editor",
+      "description": "Context menu item to open CV editor"
+    },
+    "extractProfile": {
+      "message": "Extract Profile",
+      "description": "Button text to extract profile"
+    },
+    "login": {
+      "message": "Login",
+      "description": "Button text for login"
+    },
+    "register": {
+      "message": "Register",
+      "description": "Button text for register"
+    },
+    "logout": {
+      "message": "Logout",
+      "description": "Button text for logout"
+    },
+    "email": {
+      "message": "Email",
+      "description": "Label for email input"
+    },
+    "password": {
+      "message": "Password",
+      "description": "Label for password input"
+    },
+    "createNewCV": {
+      "message": "Create New CV",
+      "description": "Button text to create a new CV"
+    },
+    "errorCreateCV": {
+      "message": "An error occurred while creating a new CV.",
+      "description": "Error message when creating a new CV fails"
+    },
+    "editCVData": {
+      "message": "Edit CV Data",
+      "description": "Header for CV editor section"
+    },
+    "preview": {
+      "message": "Preview",
+      "description": "Header for preview section"
+    },
+    "saveChanges": {
+      "message": "Save Changes",
+      "description": "Button text to save changes"
+    },
+    "generatePDF": {
+      "message": "Generate PDF",
+      "description": "Button text to generate PDF"
+    },
+    "saveAsHTML": {
+      "message": "Save as HTML",
+      "description": "Button text to save as HTML"
+    },
+    "openPreview": {
+      "message": "Open Preview",
+      "description": "Button text to open preview"
+    },
+    "cvEditor": {
+      "message": "CV Editor",
+      "description": "Title for CV editor page"
+    },
+    "scrapedProfiles": {
+      "message": "Scraped Profiles",
+      "description": "Header for scraped profiles section"
+    },
+    "selectTemplate": {
+      "message": "Select Template",
+      "description": "Label for template selection dropdown"
+    },
+    "template1": {
+      "message": "Template 1",
+      "description": "Name of the first CV template"
+    },
+    "template2": {
+      "message": "Template 2",
+      "description": "Name of the second CV template"
+    },
+    "template3": {
+      "message": "Template 3",
+      "description": "Name of the third CV template"
+    },
+    "template4": {
+      "message": "Template 4",
+      "description": "Name of the fourth CV template"
+    },
+    "extractionMessage": {
+      "message": "Extracting profile information, please wait...",
+      "description": "Message shown while extracting profile"
+    },
+    "loadingMessage": {
+      "message": "Loading...",
+      "description": "Message shown while loading"
+    },
+    "errorNoActiveTab": {
+      "message": "No active tab found. Please make sure you have an active tab open.",
+      "description": "Error message when no active tab is found"
+    },
+    "errorExtractingHTML": {
+      "message": "Failed to extract HTML from the page. Please make sure you're on a valid webpage and try again.",
+      "description": "Error message when HTML extraction fails"
+    },
+    "errorProcessingHTML": {
+      "message": "Error processing HTML. Please try again.",
+      "description": "Error message when processing HTML fails"
+    },
+    "successSaveChanges": {
+      "message": "Changes saved successfully!",
+      "description": "Success message when changes are saved"
+    },
+    "errorSaveChanges": {
+      "message": "Failed to save changes: $ERROR$",
+      "description": "Error message when saving changes fails",
+      "placeholders": {
+        "error": {
+          "content": "$1",
+          "example": "Network error"
+        }
+      }
+    },
+    "confirmDeleteCV": {
+      "message": "Are you sure you want to delete this CV?",
+      "description": "Confirmation message for deleting a CV"
+    },
+    "errorDeleteCV": {
+      "message": "Failed to delete the CV. Please try again.",
+      "description": "Error message when deleting a CV fails"
+    },
+    "confirmSaveChanges": {
+      "message": "You have unsaved changes. Do you want to save them?",
+      "description": "Confirmation message for saving changes when switching CVs"
+    },
+    "confirmDiscardChanges": {
+      "message": "You have unsaved changes. Do you want to proceed without saving them?",
+      "description": "Confirmation message for saving changes when switching CVs"
+    },
+    "uploadProfilePicture": {
+      "message": "Upload Profile Picture",
+      "description": "Label for profile picture upload input"
+    },
+    "personalInformation": {
+      "message": "Personal Information",
+      "description": "Header for personal information section"
+    },
+    "name": {
+      "message": "Name",
+      "description": "Label for name input"
+    },
+    "title": {
+      "message": "Title",
+      "description": "Label for title input"
+    },
+    "skipToEditor": {
+      "message": "Skip to CV Editor",
+      "description": "Text for skip link to CV editor"
+    },
+    "deleteCV": {
+      "message": "Delete",
+      "description": "Button text to delete a CV"
+    },
+    "profilePicture": {
+      "message": "Profile Picture",
+      "description": "Label for profile picture section"
+    },
+    "summary": {
+      "message": "Summary",
+      "description": "Label for summary section"
+    },
+    "skills": {
+      "message": "Skills",
+      "description": "Label for skills section"
+    },
+    "workExperience": {
+      "message": "Work Experience",
+      "description": "Label for work experience section"
+    },
+    "education": {
+      "message": "Education",
+      "description": "Label for education section"
+    },
+    "company": {
+      "message": "Company",
+      "description": "Label for company input in work experience"
+    },
+    "jobTitle": {
+      "message": "Job Title",
+      "description": "Label for job title input in work experience"
+    },
+    "date": {
+      "message": "Date",
+      "description": "Label for date input"
+    },
+    "description": {
+      "message": "Description",
+      "description": "Label for description input"
+    },
+    "institution": {
+      "message": "Institution",
+      "description": "Label for institution input in education"
+    },
+    "degree": {
+      "message": "Degree",
+      "description": "Label for degree input in education"
+    },
+    "contactInformation": {
+      "message": "Contact Information",
+      "description": "Label for contact information section"
+    },
+    "phone": {
+      "message": "Phone",
+      "description": "Label for phone input"
+    },
+    "location": {
+      "message": "Location",
+      "description": "Label for location input"
+    },
+    "additionalSections": {
+      "message": "Additional Sections",
+      "description": "Label for additional sections"
+    },
+    "availability": {
+      "message": "Availability",
+      "description": "Label for availability section"
+    },
+    "hourlyRate": {
+      "message": "Hourly Rate",
+      "description": "Label for hourly rate section"
+    },
+    "testimonials": {
+      "message": "Testimonials",
+      "description": "Label for testimonials section"
+    },
+    "certifications": {
+      "message": "Certifications",
+      "description": "Label for certifications section"
+    },
+    "languages": {
+      "message": "Languages",
+      "description": "Label for languages section"
+    },
+    "portfolio": {
+      "message": "Portfolio",
+      "description": "Label for portfolio section"
+    },
+    "cvLanguage": {
+      "message": "CV Language",
+      "description": "Label for CV language selector"
+    },
+    "renameCV": {
+      "message": "Rename",
+      "description": "Button text to rename a CV"
+    },
+    "errorRenameCV": {
+      "message": "Failed to rename the CV. Please try again.",
+      "description": "Error message when renaming a CV fails"
+    },
+    "duplicateCV": {
+      "message": "Duplicate",
+      "description": "Button text to duplicate a CV"
+    },
+    "errorDuplicateCV": {
+      "message": "Failed to duplicate the CV. Please try again.",
+      "description": "Error message when duplicating a CV fails"
+    },
+    "enterNewName": {
+      "message": "Enter new name for the CV",
+      "description": "Prompt for entering a new CV name"
+    },
+    "extractionComplete": {
+      "message": "Profile extracted successfully!",
+      "description": "Message shown when extraction is complete"
+    },
+    "extractionError": {
+      "message": "Error extracting profile: $MESSAGE$",
+      "description": "Message shown when extraction fails",
+      "placeholders": {
+        "message": {
+          "content": "$1",
+          "example": "Network error"
+        }
+      }
+    },
+    "extractionInProgressTitle": {
+      "message": "Profile Extraction in Progress",
+      "description": "Title for the notification when extraction is in progress"
+    },
+    "extractionInProgressMessage": {
+      "message": "Your profile is being extracted. It will be added when complete.",
+      "description": "Message for the notification when extraction is in progress"
+    },
+    "upgrade": {
+      "message": "Upgrade to Premium",
+      "description": "Button text for upgrading to premium"
+    },
+    "buyCredits": {
+      "message": "Buy Credits",
+      "description": "Button text for buying credits"
+    },
+    "tier": {
+      "message": "Tier",
+      "description": "Label for tier"
+    },
+    "extractionsLeft": {
+      "message": "Extractions left",
+      "description": "Label for extractions left"
+    },
+    "openPayments": {
+      "message": "Open Payments",
+      "description": "Button text to open payments"
+    },
+    "sectionLocked": {
+      "message": "This section cannot be reordered",
+      "description": "Tooltip text for locked sections"
+    },
+    "reorderSections": {
+      "message": "You can reorder sections by clicking and dragging them.",
+      "description": "Message for reordering sections"
+    },
+    "invalidEmailMessage": {
+      "message": "Please enter a valid email address",
+      "description": "Error message for invalid email"
+    },
+    "invalidPasswordMessage": {
+      "message": "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number",
+      "description": "Error message for invalid password"
+    },
+    "userAlreadyExistsMessage": {
+      "message": "User already exists",
+      "description": "Error message for user already exists"
+    },
+    "userCreatedMessage": {
+      "message": "User created successfully",
+      "description": "Success message for user created"
+    },
+    "verifyEmail": {
+      "message": "Verify Email",
+      "description": "Button text to verify email"
+    },
+    "enterVerificationCode": {
+      "message": "Enter 6-digit verification code",
+      "description": "Label for verification code input"
+    },
+    "resendCode": {
+      "message": "Resend Code",
+      "description": "Button text to resend verification code"
+    },
+    "backToLogin": {
+      "message": "Back to Login",
+      "description": "Button text to go back to login"
+    },
+    "verificationCodeSent": {
+      "message": "A verification code has been sent to $1",
+      "description": "Message shown when verification code is sent"
+    },
+    "invalidVerificationCode": {
+      "message": "Invalid verification code",
+      "description": "Error message for invalid verification code"
+    },
+    "verificationCodeResent": {
+      "message": "Verification code has been resent",
+      "description": "Message shown when verification code is resent"
+    },
+    "verificationRequired": {
+      "message": "Email Verification Required",
+      "description": "Title for email verification required"
+    },
+    "pleaseVerifyEmail": {
+      "message": "Please verify your email address before continuing",
+      "description": "Message shown when email verification is required"
+    },
+    "rateLimitExceeded": {
+      "message": "Too many requests. Please wait $1 seconds before trying again.",
+      "description": "Error message when rate limit is exceeded"
+    },
+    "rateLimitExceededTooltip": {
+      "message": "Button disabled due to rate limit. Please wait.",
+      "description": "Tooltip for disabled button due to rate limit"
+    },
+    "errorInitializingEditor": {
+      "message": "Failed to initialize editor. Please try again.",
+      "description": "Error message when editor initialization fails"
+    },
+    "errorFetchingCVs": {
+      "message": "Failed to fetch CVs. Please try again.",
+      "description": "Error message when fetching CVs fails"
+    },
+    "errorLoadingUserInfo": {
+      "message": "Failed to load user information. Please try again.",
+      "description": "Error message when loading user info fails"
+    },
+    "invalidLoginMessage": {
+      "message": "Invalid email or password",
+      "description": "Error message for invalid login credentials"
+    },
+    "invalidRegistrationMessage": {
+      "message": "Invalid registration details",
+      "description": "Error message for invalid registration details"
+    },
+    "registrationError": {
+      "message": "Registration failed. Please try again.",
+      "description": "Error message when registration fails"
+    },
+    "errorCommunicatingWithPage": {
+      "message": "Error communicating with page",
+      "description": "Error message when communication with page fails"
+    },
+    "failedToExtractHTML": {
+      "message": "Failed to extract HTML from the page",
+      "description": "Error message when HTML extraction fails"
+    },
+    "errorProcessingData": {
+      "message": "Error processing data",
+      "description": "Error message when processing data fails"
+    },
+    "failedToOpenPaymentsPage": {
+      "message": "Failed to open payments page. Please try again.",
+      "description": "Error message when opening payments page fails"
+    },
+    "invalidVerificationCodeMessage": {
+      "message": "Please enter a valid verification code",
+      "description": "Error message for invalid verification code format"
+    },
+    "verificationError": {
+      "message": "Verification failed. Please try again.",
+      "description": "Error message when verification fails"
+    },
+    "resendCodeError": {
+      "message": "Failed to resend verification code. Please try again.",
+      "description": "Error message when resending verification code fails"
+    },
+    "errorLoadingTemplates": {
+      "message": "Failed to load CV templates. Please try again.",
+      "description": "Error message when loading CV templates fails"
+    },
+    "addItem": {
+      "message": "Add Item",
+      "description": "Button text to add an item to a list"
+    },
+    "removeItem": {
+      "message": "Remove Item",
+      "description": "Button text to remove an item from a list"
+    },
+    "errorLoadingCV": {
+      "message": "Failed to load CV. Please try again.",
+      "description": "Error message when loading a CV fails"
+    },
+    "transactionError": {
+      "message": "Transaction could not be processed",
+      "description": "Error message when transaction fails"
+    },
+    "transactionConfirmed": {
+      "message": "Transaction confirmed",
+      "description": "Success message when transaction is confirmed"
+    },
+    "transactionCompleted": {
+      "message": "Transaction already completed", 
+      "description": "Message when transaction was already completed"
+    },
+    "transactionNotFound": {
+      "message": "Transaction not found",
+      "description": "Error message when transaction is not found"
+    },
+    "userIdMismatch": {
+      "message": "User ID mismatch",
+      "description": "Error message when user IDs don't match"
+    },
+    "cvDuplicatedSuccess": {
+      "message": "CV duplicated successfully",
+      "description": "Success message when CV is duplicated"
+    },
+    "errorDuplicatingCV": {
+      "message": "An error occurred while duplicating the CV",
+      "description": "Error message when CV duplication fails"
+    },
+    "unexpectedError": {
+      "message": "An unexpected error occurred",
+      "description": "Generic error message for unexpected errors"
+    },
+    "transactionExistsOtherUser": {
+      "message": "Transaction exists but belongs to different user",
+      "description": "Error when transaction belongs to another user"
+    },
+    "mustBeLoggedIn": {
+      "message": "You must be logged in to cancel a subscription",
+      "description": "Error message when user is not logged in"
+    },
+    "invalidUser": {
+      "message": "Invalid user",
+      "description": "Error message for invalid user"
+    },
+    "subscriptionCancelled": {
+      "message": "Subscription cancelled successfully",
+      "description": "Success message when subscription is cancelled"
+    },
+    "failedToCancelSubscription": {
+      "message": "Failed to cancel subscription",
+      "description": "Error message when subscription cancellation fails"
+    },
+    "notPremiumUser": {
+      "message": "You are not a premium user",
+      "description": "Error message when non-premium user tries premium action"
+    },
+    "emailAndPasswordRequired": {
+      "message": "Email and password are required",
+      "description": "Error message when email or password is missing"
+    },
+    "errorSendingVerificationEmail": {
+      "message": "Error sending verification email",
+      "description": "Error message when verification email fails to send"
+    },
+    "errorCreatingUser": {
+      "message": "Error creating user",
+      "description": "Error message when user creation fails"
+    },
+    "emailAndVerificationCodeRequired": {
+      "message": "Email and verification code are required",
+      "description": "Error message when email or verification code is missing"
+    },
+    "userNotFound": {
+      "message": "User not found",
+      "description": "Error message when user cannot be found"
+    },
+    "invalidOrExpiredVerificationCode": {
+      "message": "Invalid or expired verification code",
+      "description": "Error message when verification code is invalid or expired"
+    },
+    "emailVerifiedSuccessfully": {
+      "message": "Email verified successfully",
+      "description": "Success message when email is verified"
+    },
+    "errorVerifyingEmail": {
+      "message": "Error verifying email",
+      "description": "Error message when email verification fails"
+    },
+    "emailAlreadyVerified": {
+      "message": "Email is already verified",
+      "description": "Message when attempting to verify an already verified email"
+    },
+    "verificationEmailSent": {
+      "message": "Verification email has been sent",
+      "description": "Success message when verification email is sent"
+    },
+    "errorResendingVerification": {
+      "message": "Error resending verification email",
+      "description": "Error message when resending verification email fails"
+    },
+    "loggedInSuccessfully": {
+      "message": "Logged in successfully",
+      "description": "Success message when login is successful"
+    },
+    "loggedOutSuccessfully": {
+      "message": "Logged out successfully",
+      "description": "Success message when logout is successful"
+    },
+    "unauthorized": {
+      "message": "Unauthorized access",
+      "description": "Error message for unauthorized access"
+    },
+    "youMustBeLoggedInToViewUserInfo": {
+      "message": "You must be logged in to view user information",
+      "description": "Error message when trying to view user info while logged out"
+    },
+    "youMustBeLoggedInToGenerateAPaymentToken": {
+      "message": "You must be logged in to generate a payment token",
+      "description": "Error message when trying to generate payment token while logged out"
+    },
+    "newNameRequiredAndMustBeString": {
+      "message": "New name is required and must be a text string",
+      "description": "Error message when new name is invalid"
+    },
+    "newNameTooLong": {
+      "message": "New name is too long",
+      "description": "Error message when new name exceeds length limit"
+    },
+    "youDoNotHavePermissionToRenameThisCV": {
+      "message": "You do not have permission to rename this CV",
+      "description": "Error message when trying to rename CV without permission"
+    },
+    "youDoNotHavePermissionToDuplicateThisCV": {
+      "message": "You do not have permission to duplicate this CV",
+      "description": "Error message when trying to duplicate CV without permission"
+    },
+    "youHaveReachedTheMaximumNumberOfAllowedCVs": {
+      "message": "You have reached the maximum number of allowed CVs",
+      "description": "Error message when CV limit is reached"
+    },
+    "invalidOrExpiredToken": {
+      "message": "Invalid or expired token",
+      "description": "Error message for invalid or expired token"
+    },
+    "cvProcessedSuccessfully": {
+      "message": "CV processed successfully",
+      "description": "Success message when CV is processed"
+    },
+    "cvDeletedSuccessfully": {
+      "message": "CV deleted successfully",
+      "description": "Success message when CV is deleted"
+    },
+    "cvCreatedSuccessfully": {
+      "message": "CV created successfully",
+      "description": "Success message when CV is created"
+    },
+    "cvUpdatedSuccessfully": {
+      "message": "CV updated successfully",
+      "description": "Success message when CV is updated"
+    },
+    "cvRenamedSuccessfully": {
+      "message": "CV renamed successfully",
+      "description": "Success message when CV is renamed"
+    },
+    "cvNotFound": {
+      "message": "CV not found",
+      "description": "Error message when CV cannot be found"
+    },
+    "anErrorOccurredWhileRenamingTheCV": {
+      "message": "An error occurred while renaming the CV",
+      "description": "Error message when CV renaming fails"
+    },
+    "subscriptionCancelledSuccessfully": {
+      "message": "Subscription cancelled successfully",
+      "description": "Success message when subscription is cancelled"
+    },
+    "youMustBeLoggedInToCancelASubscription": {
+      "message": "You must be logged in to cancel a subscription",
+      "description": "Error message when trying to cancel subscription while logged out"
+    },
+    "invalidUsernameOrPassword": {
+      "message": "Invalid username or password",
+      "description": "Error message for invalid login credentials"
+    },
+    "noExtractionsLeft": {
+      "message": "No extractions remaining",
+      "description": "Error message when user has no more extractions available"
+    },
+    "transactionExistsButBelongsToDifferentUser": {
+      "message": "Transaction exists but belongs to a different user",
+      "description": "Error message when transaction ID is associated with another user"
+    },
+    "transactionAlreadyCompleted": {
+      "message": "Transaction has already been completed",
+      "description": "Error message when attempting to process a completed transaction"
+    },
+    "emailCodeAndPasswordRequired": {
+      "message": "Email, code, and password are required",
+      "description": "Error message when email, code, or password is missing"
+    },
+    "invalidOrExpiredResetCode": {
+      "message": "Invalid or expired reset code",
+      "description": "Error message when reset code is invalid or expired"
+    },
+    "passwordResetSuccessfully": {
+      "message": "Password reset successfully",
+      "description": "Success message when password is reset"
+    },
+    "errorSendingPasswordResetEmail": {
+      "message": "Error sending password reset email",
+      "description": "Error message when password reset email fails to send"
+    },
+    "passwordResetEmailSent": {
+      "message": "Password reset email has been sent",
+      "description": "Success message when password reset email is sent"
+    },
+    "enterResetCode": {
+      "message": "Enter reset code",
+      "description": "Placeholder for reset code input"
+    },
+    "enterNewPassword": {
+      "message": "Enter new password",
+      "description": "Placeholder for new password input"
+    },
+    "resetPasswordError": {
+      "message": "Error resetting password",
+      "description": "Error message when resetting password fails"
+    },
+    "invalidResetCodeMessage": {
+      "message": "Invalid reset code",
+      "description": "Error message when reset code is invalid"
+    },
+    "resetPassword": {
+      "message": "Reset password",
+      "description": "Button text to reset password"
+    },
+    "submit": {
+      "message": "Submit",
+      "description": "Button text to submit form"
+    },
+    "cancel": {
+      "message": "Cancel",
+      "description": "Button text to cancel action"
+    },
+    "requestPasswordResetError": {
+      "message": "Error requesting password reset",
+      "description": "Error message when requesting password reset fails"
+    },
+    "emailRequired": {
+      "message": "Email is required",
+      "description": "Error message when email is missing"
+    },
+    "errorResendingPasswordReset": {
+      "message": "Error resending password reset",
+      "description": "Error message when resending password reset fails"
+    },
+    "passwordResetCancelled": {
+      "message": "Password reset cancelled",
+      "description": "Success message when password reset is cancelled"
+    },
+    "errorCancellingPasswordReset": {
+      "message": "Error cancelling password reset",
+      "description": "Error message when cancelling password reset fails"
+    }
+  }
