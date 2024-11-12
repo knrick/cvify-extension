@@ -258,6 +258,16 @@ function logout() {
   })
   .then(response => response.json())
   .then(data => {
+    // Close any open CV editor or payments tabs
+    chrome.tabs.query({url: [
+      "https://cvify.xyz/editor*",
+      "https://cvify.xyz/payments*"
+    ]}, function(tabs) {
+      tabs.forEach(tab => {
+        chrome.tabs.remove(tab.id);
+      });
+    });
+
     chrome.storage.local.remove(['user', 'emailVerified'], function() {
       currentEmail = null;
       showAuthForm();
