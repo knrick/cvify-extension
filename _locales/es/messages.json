@@ -80,20 +80,44 @@
       "description": "Etiqueta para el menú desplegable de selección de plantilla"
   },
   "template1": {
-      "message": "Plantilla 1",
+      "message": "Verde",
       "description": "Nombre de la primera plantilla de CV"
   },
   "template2": {
-      "message": "Plantilla 2",
+      "message": "Plano (sin foto)",
       "description": "Nombre de la segunda plantilla de CV"
   },
   "template3": {
-      "message": "Plantilla 3",
+      "message": "Azul",
       "description": "Nombre de la tercera plantilla de CV"
   },
   "template4": {
-      "message": "Plantilla 4",
+      "message": "Negro y Amarillo",
       "description": "Nombre de la cuarta plantilla de CV"
+  },
+  "template5": {
+      "message": "Azul Marino",
+      "description": "Nombre de la quinta plantilla de CV"
+  },
+  "template6": {
+      "message": "Beige Claro",
+      "description": "Nombre de la sexta plantilla de CV"
+  },
+  "template7": {
+      "message": "Plano",
+      "description": "Nombre de la séptima plantilla de CV"
+  },
+  "template8": {
+      "message": "Gris Oscuro",
+      "description": "Nombre de la octava plantilla de CV"
+  },
+  "template9": {
+      "message": "Gris Oscuro y Blanco",
+      "description": "Nombre de la novena plantilla de CV"
+  },
+  "template10": {
+      "message": "Plano 2",
+      "description": "Nombre de la décima plantilla de CV"
   },
   "extractionMessage": {
       "message": "Extrayendo información del perfil, por favor espera...",

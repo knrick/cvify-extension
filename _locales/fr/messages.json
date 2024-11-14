@@ -80,20 +80,44 @@
       "description": "Étiquette pour le menu déroulant de sélection de modèle"
   },
   "template1": {
-      "message": "Modèle 1",
+      "message": "Vert",
       "description": "Nom du premier modèle de CV"
   },
   "template2": {
-      "message": "Modèle 2",
+      "message": "Plano (sans photo)",
       "description": "Nom du deuxième modèle de CV"
   },
   "template3": {
-      "message": "Modèle 3",
+      "message": "Bleu",
       "description": "Nom du troisième modèle de CV"
   },
   "template4": {
-      "message": "Modèle 4",
+      "message": "Noir et Jaune",
       "description": "Nom du quatrième modèle de CV"
+  },
+  "template5": {
+      "message": "Bleu Marine",
+      "description": "Nom du cinquième modèle de CV"
+  },
+  "template6": {
+      "message": "Beige Clair",
+      "description": "Nom du sixième modèle de CV"
+  },
+  "template7": {
+      "message": "Plano",
+      "description": "Nom du septième modèle de CV"
+  },
+  "template8": {
+      "message": "Gris Foncé",
+      "description": "Nom du huitième modèle de CV"
+  },
+  "template9": {
+      "message": "Gris Foncé et Blanc",
+      "description": "Nom du neuvième modèle de CV"
+  },
+  "template10": {
+      "message": "Plano 2",
+      "description": "Nom du dixième modèle de CV"
   },
   "extractionMessage": {
       "message": "Extraction des informations du profil, veuillez patienter...",

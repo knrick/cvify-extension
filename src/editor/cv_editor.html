@@ -36,7 +36,10 @@
       margin-right: 10px; 
     }
     #button-container { 
-      display: none; 
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      z-index: 1000;
     }
     #profile-select {
       width: 100%;
@@ -184,11 +187,6 @@
 <body>
   <a href="#editor-preview-container" class="skip-link" id="skip-link"></a>
   <h1 id="cv-editor-title"></h1>
-  <div id="button-container" class="button-container">
-    <button id="generate-pdf"></button>
-    <button id="save-html"></button>
-    <button id="open-preview"></button>
-  </div>
   <div class="container">
     <div class="profile-list">
       <h2 id="scraped-profiles-title"></h2>
@@ -209,6 +207,12 @@
           <option value="template2" id="template2-option"></option>
           <option value="template3" id="template3-option"></option>
           <option value="template4" id="template4-option"></option>
+          <option value="template5" id="template5-option"></option>
+          <option value="template6" id="template6-option"></option>
+          <option value="template7" id="template7-option"></option>
+          <option value="template8" id="template8-option"></option>
+          <option value="template9" id="template9-option"></option>
+          <option value="template10" id="template10-option"></option>
         </select>
         <div class="language-selector">
           <label for="cv-language-select" id="cv-language-label">CV Language:</label>
@@ -221,6 +225,11 @@
         <div id="preview-content"></div>
       </div>
     </div>
+  </div>
+  <div id="button-container" class="button-container">
+    <button id="generate-pdf"></button>
+    <button id="save-html"></button>
+    <button id="open-preview"></button>
   </div>
   <script src="cv_localizations.js"></script>
   <script type="module" src="cv_editor.js"></script>

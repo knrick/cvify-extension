@@ -9,110 +9,130 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #f4f4f4;
+            color: #333;
         }
         .container {
             display: flex;
-            background-color: white;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 20px auto;
+            background-color: #fff;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .left-column {
-            flex: 1;
-            background-color: #4169E1;
+        .sidebar {
+            background-color: #2a3b58;
             color: white;
-            padding: 30px;
-        }
-        .right-column {
-            flex: 2;
-            padding: 30px;
+            width: 200px;
+            padding: 20px;
+            text-align: left;
         }
         .profile-pic {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            margin-bottom: 20px;
+            margin: 0 auto 15px;
+            display: block;
         }
         .name {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
+            color: #f0f0f0;
             margin: 0;
         }
         .title {
-            font-size: 18px;
+            font-size: 14px;
+            color: #ddd;
             margin-top: 5px;
-            color: #D0E1FF;
+            text-transform: uppercase;
+        }
+        .main-content {
+            padding: 20px;
+            flex: 1;
         }
         .section {
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
         .section-title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            color: #333;
-            border-bottom: 2px solid #4169E1;
+            color: #2a3b58;
+            border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
             margin-bottom: 10px;
+            text-transform: uppercase;
         }
         ul {
             list-style: none;
             padding: 0;
         }
-        ul li {
-            margin-bottom: 10px;
+        .work-experience ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-column">
+        <div class="sidebar">
             <img src="{{ profile_picture }}" alt="Profile Picture" class="profile-pic">
+            
+            {%if name%}
             <h1 class="name">{{ name }}</h1>
+            {%endif%}
+            
+            {%if title%}
             <p class="title">{{ title }}</p>
-
+            {%endif%}
+            
             {%if contact%}
-            <div class="section">
+            <div class="contact-info">
                 <h2 class="section-title">{{ localizations.contactInformation }}</h2>
-                <p>✉️ {{ localizations.email }}: {{ contact.email }}</p>
                 <p>📞 {{ localizations.phone }}: {{ contact.phone }}</p>
+                <p>✉️ {{ localizations.email }}: {{ contact.email }}</p>
                 <p>📍 {{ localizations.location }}: {{ contact.location }}</p>
             </div>
             {%endif%}
-
+            
+            {%if education%}
+            <div class="education">
+                <h2 class="section-title">{{ localizations.education }}</h2>
+                {%for edu in education%}
+                <p><strong>{{ edu.date }}</strong><br>
+                <strong>{{ edu.institution }}</strong><br>
+                {{ edu.degree }}</p>
+                {%endfor%}
+            </div>
+            {%endif%}
+            
             {%if skills%}
-            <div class="section">
+            <div class="skills">
                 <h2 class="section-title">{{ localizations.skills }}</h2>
                 <ul>
                     {%for skill in skills%}
-                    <li>• {{ skill }}</li>
+                    <li>{{ skill }}</li>
                     {%endfor%}
                 </ul>
             </div>
             {%endif%}
-
+            
             {%if languages%}
-            <div class="section">
+            <div class="languages">
                 <h2 class="section-title">{{ localizations.languages }}</h2>
                 <ul>
                     {%for language in languages%}
-                    <li>• {{ language }}</li>
+                    <li>{{ language }}</li>
                     {%endfor%}
                 </ul>
             </div>
             {%endif%}
+                    </div>
 
-            {%if hourly_rate%}
-            <div class="section">
-                <h2 class="section-title">{{ localizations.hourlyRate }}</h2>
-                <p>{{ hourly_rate }}</p>
-            </div>
-            {%endif%}
-        </div>
-        <div class="right-column">
+        <div class="main-content">
             {%if summary%}
             <div class="section">
-                <h2 class="section-title">{{ localizations.summary }}</h2>
+                <h2 class="section-title">{{ localizations.profile }}</h2>
                 <p>{{ summary }}</p>
             </div>
             {%endif%}
@@ -121,23 +141,12 @@
             <div class="section">
                 <h2 class="section-title">{{ localizations.workExperience }}</h2>
                 {%for job in experience%}
-                <div style="margin-bottom: 10px;">
-                    <h3>{{ job.title }}</h3>
-                    <p style="font-style: italic;">{{ job.company }} | {{ job.date }}</p>
-                    <p>{{ job.description }}</p>
-                </div>
-                {%endfor%}
-            </div>
-            {%endif%}
-
-            {%if education%}
-            <div class="section">
-                <h2 class="section-title">{{ localizations.education }}</h2>
-                {%for edu in education%}
-                <div style="margin-bottom: 10px;">
-                    <h3>{{ edu.degree }}</h3>
-                    <p style="font-style: italic;">{{ edu.institution }} ({{ edu.date }})</p>
-                    <p>{{ edu.details }}</p>
+                <div>
+                    <h3>{{ job.company }}</h3>
+                    <span>{{ job.title }} &bullet; {{ job.date }}</span>
+                    <ul>
+                        <li>{{ job.description }}</li>
+                    </ul>
                 </div>
                 {%endfor%}
             </div>
@@ -148,16 +157,9 @@
                 <h2 class="section-title">{{ localizations.portfolio }}</h2>
                 <ul>
                     {%for project in portfolio%}
-                    <li>• {{ project }}</li>
+                    <li>{{ project }}</li>
                     {%endfor%}
                 </ul>
-            </div>
-            {%endif%}
-
-            {%if certifications%}
-            <div class="section">
-                <h2 class="section-title">{{ localizations.certifications }}</h2>
-                <p>{{ certifications }}</p>
             </div>
             {%endif%}
 
@@ -165,6 +167,22 @@
             <div class="section">
                 <h2 class="section-title">{{ localizations.testimonials }}</h2>
                 <p>{{ testimonials }}</p>
+            </div>
+            {%endif%}
+
+            {%if hourly_rate%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.hourlyRate }}</h2>
+                <p>{{ hourly_rate }}</p>
+            </div>
+            {%endif%}
+
+            
+            
+            {%if certifications%}
+            <div class="section">
+                <h2 class="section-title">{{ localizations.certifications }}</h2>
+                <p>{{ certifications }}</p>
             </div>
             {%endif%}
         </div>

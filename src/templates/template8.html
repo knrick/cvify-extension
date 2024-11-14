@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }} - CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+        }
+        .header {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .header .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid #ffffff;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .header .name {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .header .title {
+            font-size: 18px;
+            font-style: italic;
+            background-color: #c45c4f;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .section-title {
+            background-color: #3a3a3a;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+        .left-column, .right-column {
+            flex: 1;
+        }
+        .left-column .section, .right-column .section {
+            margin-bottom: 20px;
+        }
+        .left-column p, .right-column p {
+            margin: 10px 0;
+        }
+        .contact-info, .languages-list, .skills-list, .hourly-rate, .portfolio-list, .certifications-list, .testimonials-list {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .contact-info div, .languages-list div, .skills-list div, .portfolio-list div {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-info img, .languages-list img, .skills-list img {
+            margin-right: 10px;
+        }
+        .experience-item, .education-item, .testimonial-item {
+            margin-bottom: 10px;
+        }
+        .job-title, .degree {
+            font-weight: bold;
+        }
+        .company, .institution {
+            font-style: italic;
+        }
+        .date {
+            color: #666;
+        }
+        .languages-list div, .skills-list div, .portfolio-list div {
+            background-color: #555;
+            padding: 5px;
+            margin: 3px 0;
+            border-radius: 3px;
+        }
+        .testimonial-item {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #666;
+            text-align: right;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="{{ profile_picture }}" alt="Profile Picture" class="profile-pic">
+            <h1 class="name">{{ name }}</h1>
+            <p class="title">{{ title }}</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                {%if summary%}
+                <div class="section">
+                    <h2 class="section-title">{{ localizations.summary }}</h2>
+                    <p>{{ summary }}</p>
+                </div>
+                {%endif%}
+
+                {%if contact%}
+                <div class="contact-info">
+                    <div>📞 {{ contact.phone }}</div>
+                    <div>✉️ {{ contact.email }}</div>
+                    <div>📍 {{ contact.location }}</div>
+                </div>
+                {%endif%}
+
+                {%if hourly_rate%}
+                <div class="hourly-rate">
+                    <h3>{{ localizations.hourlyRate }}</h3>
+                    <div>{{ hourly_rate }}</div>
+                </div>
+                {%endif%}
+
+                {%if languages%}
+                <div class="languages-list">
+                    <h3>{{ localizations.languages }}</h3>
+                    {%for language in languages%}
+                    <div>{{ language }}</div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+
+                {%if portfolio%}
+                <div class="portfolio-list">
+                    <h3>{{ localizations.portfolio }}</h3>
+                    {%for item in portfolio%}
+                    <div>{{ item }}</div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                {%if experience%}
+                <div class="section">
+                    <h2 class="section-title">{{ localizations.workExperience }}</h2>
+                    {%for job in experience%}
+                    <div class="experience-item">
+                        <p class="job-title">{{ job.title }} <span class="date">{{ job.date }}</span></p>
+                        <p class="company">{{ job.company }}</p>
+                        <p>{{ job.description }}</p>
+                    </div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+
+                {%if education%}
+                <div class="section">
+                    <h2 class="section-title">{{ localizations.education }}</h2>
+                    {%for edu in education%}
+                    <div class="education-item">
+                        <p class="degree">{{ edu.degree }}: {{ edu.date }}</p>
+                        <p class="institution">{{ edu.institution }}</p>
+                    </div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+
+                {%if certifications%}
+                <div class="certifications-list">
+                    <h3>{{ localizations.certifications }}</h3>
+                    <div>{{ certifications }}</div>
+                </div>
+                {%endif%}
+
+                {%if skills%}
+                <div class="skills-list">
+                    <h3>{{ localizations.skills }}</h3>
+                    {%for skill in skills%}
+                    <div>{{ skill }}</div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+
+                {%if testimonials%}
+                <div class="section">
+                    <h2 class="section-title">{{ localizations.testimonials }}</h2>
+                    {%for testimonial in testimonials%}
+                    <div class="testimonial-item">
+                        <p>{{ testimonial.text }}</p>
+                        <p class="testimonial-author">- {{ testimonial.author }}</p>
+                    </div>
+                    {%endfor%}
+                </div>
+                {%endif%}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

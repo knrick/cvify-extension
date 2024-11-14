@@ -126,9 +126,9 @@
             {%if contact%}
             <div class="section">
                 <h2 class="section-title">{{ localizations.contactInformation }}</h2>
-                <p>{{ localizations.email }}: {{ contact.email }}</p>
-                <p>{{ localizations.phone }}: {{ contact.phone }}</p>
-                <p>{{ localizations.location }}: {{ contact.location }}</p>
+                <p>✉️ {{ localizations.email }}: {{ contact.email }}</p>
+                <p>📞 {{ localizations.phone }}: {{ contact.phone }}</p>
+                <p>📍 {{ localizations.location }}: {{ contact.location }}</p>
             </div>
             {%endif%}
             {%if summary%}
@@ -168,15 +168,15 @@
                 </ul>
             </div>
             {%endif%}
-
+        </div>
+        <div class="right-column">
             {%if hourly_rate%}
             <div class="section">
                 <h2 class="section-title">{{ localizations.hourlyRate }}</h2>
                 <p>{{ hourly_rate }}</p>
             </div>
             {%endif%}
-        </div>
-        <div class="right-column">
+
             {%if education%}
             <div class="section">
                 <h2 class="section-title">{{ localizations.education }}</h2>

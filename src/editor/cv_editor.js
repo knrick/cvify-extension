@@ -36,6 +36,12 @@ document.addEventListener('DOMContentLoaded', async function() {
     document.getElementById('template2-option').textContent = chrome.i18n.getMessage('template2');
     document.getElementById('template3-option').textContent = chrome.i18n.getMessage('template3');
     document.getElementById('template4-option').textContent = chrome.i18n.getMessage('template4');
+    document.getElementById('template5-option').textContent = chrome.i18n.getMessage('template5');
+    document.getElementById('template6-option').textContent = chrome.i18n.getMessage('template6');
+    document.getElementById('template7-option').textContent = chrome.i18n.getMessage('template7');
+    document.getElementById('template8-option').textContent = chrome.i18n.getMessage('template8');
+    document.getElementById('template9-option').textContent = chrome.i18n.getMessage('template9');
+    document.getElementById('template10-option').textContent = chrome.i18n.getMessage('template10');
     document.getElementById('generate-pdf').textContent = chrome.i18n.getMessage('generatePDF');
     document.getElementById('save-html').textContent = chrome.i18n.getMessage('saveAsHTML');
     document.getElementById('open-preview').textContent = chrome.i18n.getMessage('openPreview');
@@ -313,7 +319,13 @@ async function loadTemplates() {
       fetch(chrome.runtime.getURL('src/templates/template1.html')),
       fetch(chrome.runtime.getURL('src/templates/template2.html')),
       fetch(chrome.runtime.getURL('src/templates/template3.html')),
-      fetch(chrome.runtime.getURL('src/templates/template4.html'))
+      fetch(chrome.runtime.getURL('src/templates/template4.html')),
+      fetch(chrome.runtime.getURL('src/templates/template5.html')),
+      fetch(chrome.runtime.getURL('src/templates/template6.html')),
+      fetch(chrome.runtime.getURL('src/templates/template7.html')),
+      fetch(chrome.runtime.getURL('src/templates/template8.html')),
+      fetch(chrome.runtime.getURL('src/templates/template9.html')),
+      fetch(chrome.runtime.getURL('src/templates/template10.html'))
     ]);
     
     const htmlContents = await Promise.all(responses.map(res => {
@@ -325,7 +337,13 @@ async function loadTemplates() {
       template1: htmlContents[0],
       template2: htmlContents[1],
       template3: htmlContents[2],
-      template4: htmlContents[3]
+      template4: htmlContents[3],
+      template5: htmlContents[4],
+      template6: htmlContents[5],
+      template7: htmlContents[6],
+      template8: htmlContents[7],
+      template9: htmlContents[8],
+      template10: htmlContents[9]
     };
   } catch (error) {
     console.error("Error loading templates:", error);
@@ -432,7 +450,16 @@ function updatePreview() {
   previewContent.classList.add('loading');
   
   try {
-    // Get the current order of sections, excluding locked sections
+    // Clear existing shadow root if it exists
+    if (previewContent.shadowRoot) {
+      previewContent.shadowRoot.innerHTML = '';
+    }
+    
+    // Create shadow root if it doesn't exist
+    const shadowRoot = previewContent.shadowRoot || 
+                      previewContent.attachShadow({ mode: 'open' });
+    
+    // Get the current order of sections
     const sections = Array.from(document.querySelectorAll('.cv-section'))
       .filter(section => !section.querySelector('.locked'));
     const sectionOrder = sections.map(section => section.id);
@@ -446,7 +473,9 @@ function updatePreview() {
     
     renderedHtml = reorderSections(renderedHtml, sectionOrder);
     renderedHtml = renderTemplate(renderedHtml, cvData);
-    previewContent.innerHTML = renderedHtml;
+    
+    // Insert into shadow DOM
+    shadowRoot.innerHTML = renderedHtml;
   } catch (error) {
     console.error("Error updating preview:", error);
   } finally {
@@ -946,12 +975,10 @@ function updateProfilePicture(event) {
 const debouncedUpdateProfilePicture = debounce(updateProfilePicture);
 
 function createPrintWindow() {
-  const previewContent = document.getElementById('preview-content').innerHTML;
-  const styles = document.querySelector('style').innerHTML;
+  const previewContent = document.getElementById('preview-content').shadowRoot.innerHTML;
   const printWindow = window.open('', '', 'height=600,width=800');
   printWindow.document.write('<html><head><title>CV Preview</title>');
   printWindow.document.write('<style>');
-  printWindow.document.write(styles);
   printWindow.document.write(`
     @media print {
       @page { margin: 0; }

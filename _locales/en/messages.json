@@ -80,20 +80,44 @@
       "description": "Label for template selection dropdown"
     },
     "template1": {
-      "message": "Template 1",
+      "message": "Green",
       "description": "Name of the first CV template"
     },
     "template2": {
-      "message": "Template 2",
+      "message": "Plain (no photo)",
       "description": "Name of the second CV template"
     },
     "template3": {
-      "message": "Template 3",
+      "message": "Blue",
       "description": "Name of the third CV template"
     },
     "template4": {
-      "message": "Template 4",
+      "message": "Black & Yellow",
       "description": "Name of the fourth CV template"
+    },
+    "template5": {
+      "message": "Navy Blue",
+      "description": "Name of the fifth CV template"
+    },
+    "template6": {
+      "message": "Light Beige",
+      "description": "Name of the sixth CV template"
+    },
+    "template7": {
+      "message": "Plain", 
+      "description": "Name of the seventh CV template"
+    },
+    "template8": {
+      "message": "Dark Grey",
+      "description": "Name of the eighth CV template"
+    },
+    "template9": {
+      "message": "Dark Grey & White",
+      "description": "Name of the ninth CV template"
+    },
+    "template10": {
+      "message": "Plain 2",
+      "description": "Name of the tenth CV template"
     },
     "extractionMessage": {
       "message": "Extracting profile information, please wait...",
