@@ -1,10 +1,10 @@
 {
   "extensionName": {
-      "message": "Generador de CV",
+      "message": "CVify",
       "description": "El nombre de la extensión"
   },
   "extensionDescription": {
-      "message": "Generar un CV en PDF desde un perfil web",
+      "message": "Generador de CV con IA desde perfiles web",
       "description": "La descripción de la extensión"
   },
   "openCVEditor": {

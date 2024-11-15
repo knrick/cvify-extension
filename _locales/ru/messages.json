@@ -1,10 +1,10 @@
 {
     "extensionName": {
-      "message": "Генератор резюме",
+      "message": "CVify",
       "description": "Название расширения"
     },
     "extensionDescription": {
-      "message": "Создание PDF-резюме из веб-профиля",
+      "message": "Генератор резюме из веб-профилей с использованием ИИ",
       "description": "Описание расширения"
     },
     "openCVEditor": {

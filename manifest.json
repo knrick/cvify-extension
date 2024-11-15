@@ -13,10 +13,11 @@
     "alarms",
     "contextMenus",
     "tabs",
-    "https://cvify.xyz/*",
     "notifications"
   ],
-  "host_permissions": ["https://cvify.xyz/*"],
+  "host_permissions": [
+    "https://cvify.xyz/*"
+  ],
   "action": {
     "default_popup": "src/popup/popup.html"
   },
